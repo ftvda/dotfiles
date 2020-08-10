@@ -1,8 +1,3 @@
-# Global properties
-#
-# The top properties below are applied to every block, but can be overridden.
-# Each block command defaults to the script name to avoid boilerplate.
-# Change $SCRIPT_DIR to the location of your scripts!
 command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=15
 markup=none
@@ -22,53 +17,25 @@ signal=2
 [load average]
 label= 
 command=echo "$(uptime | sed 's/.*load average: \(.*\)/\1/' | cut -d, -f1)/$(grep 'processor' /proc/cpuinfo | wc -l)"
-interval=1
+interval=2
+
+[temperature]
+label= 
+command=echo $(( `cat /sys/class/thermal/thermal_zone1/temp` / 1000 ))
+interval=2
 
 [memory]
 command=free -h | awk 'match($0, /^Mem/){print $3 " / " $2}'
-interval=1
-
-[network]
-command=./wifi.sh
-interval=1
-
-# If the instance is not specified, use the interface used for default route.
-[iface]
-#IFACE=wlan0
-color=#00FF00
-interval=10
-separator=false
+interval=2
 
 [wifi]
-#INTERFACE=wlp3s0
-label=wifi:
-interval=10
-separator=false
+command=./wifi.sh
+interval=2
 
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-[cpu_usage]
-label=CPU
-interval=10
-min_width=CPU 100.00%
-#separator=false
-
-# The battery instance defaults to 0.
 [battery]
 command=$PWD/battery.sh
 interval=2
 
-# Date Time
-#
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
 interval=1
-
-# Temperature
-#
-# Support multiple chips, though lm-sensors.
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-#[temperature]
-#label=TEMP
-#interval=10
