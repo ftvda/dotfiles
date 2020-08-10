@@ -4,6 +4,7 @@ URxvt.scrollstyle:	plain
 URxvt.cursorUnderline:      true
 URxvt.pointerBlank:         true
 URxvt.saveLines:            3000
+URxvt.fading:	20
 
 
 !! Color Scheme and Opacity - gruvbox-dark https://github.com/morhetz/gruvbox

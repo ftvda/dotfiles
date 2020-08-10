@@ -17,25 +17,26 @@ signal=2
 [load average]
 label= 
 command=echo "$(uptime | sed 's/.*load average: \(.*\)/\1/' | cut -d, -f1)/$(grep 'processor' /proc/cpuinfo | wc -l)"
-interval=2
+interval=5
 
 [temperature]
 label= 
 command=echo $(( `cat /sys/class/thermal/thermal_zone1/temp` / 1000 ))
-interval=2
+interval=5
 
 [memory]
+label= 
 command=free -h | awk 'match($0, /^Mem/){print $3 " / " $2}'
-interval=2
+interval=5
 
 [wifi]
 command=./wifi.sh
-interval=2
+interval=5
 
 [battery]
 command=$PWD/battery.sh
-interval=2
+interval=5
 
 [time]
-command=date '+%Y-%m-%d %H:%M:%S'
-interval=1
+command=$PWD/lunar_cal.sh
+interval=5

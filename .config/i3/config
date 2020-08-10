@@ -15,6 +15,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# activate fcitx 
+exec --no-startup-id fcitx-autostart
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_volume pkill -SIGRTMIN+10 i3blocks
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_volume
@@ -123,28 +126,16 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-	
 	# resize in small ammount
-        bindsym $mod+Left resize shrink width 1 px or 1 ppt
-        bindsym $mod+Down resize grow height 1 px or 1 ppt
-        bindsym $mod+Up resize shrink height 1 px or 1 ppt
-        bindsym $mod+Right resize grow width 1 px or 1 ppt
+        bindsym $mod+h resize shrink width 1 px or 1 ppt
+        bindsym $mod+j resize grow height 1 px or 1 ppt
+        bindsym $mod+k resize shrink height 1 px or 1 ppt
+        bindsym $mod+l resize grow width 1 px or 1 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -184,5 +175,6 @@ for_window [window_role="task_dialog"] floating enable
 floating_minimum_size 30 x 30
 floating_maximum_size 1080 x 720
 
-# activate fcitx 
-exec --no-startup-id fcitx-autostart
+# disable title bar
+for_window [class="^.*"] border pixel 0
+
