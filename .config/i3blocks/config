@@ -37,6 +37,10 @@ interval=5
 command=$PWD/battery.sh
 interval=5
 
-[time]
+[calendar]
 command=$PWD/lunar_cal.sh
+interval=3600
+
+[clock]
+command=echo  `date '+%H%M'`
 interval=5
