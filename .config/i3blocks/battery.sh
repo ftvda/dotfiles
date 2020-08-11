@@ -6,11 +6,11 @@ if [ $online = 1 ]; then
     state=
 elif [ $capacity -gt 95 ]; then
     state=
-elif [ $capacity -gt 75 ]; then
+elif [ $capacity -gt 63 ]; then
     state=
-elif [ $capacity -gt 50 ]; then
+elif [ $capacity -gt 38 ]; then
     state=
-elif [ $capacity -gt 25 ]; then
+elif [ $capacity -gt 10 ]; then
     state=
 else 
     state=

@@ -6,7 +6,7 @@ markup=none
 label=
 command=$PWD/volume.sh
 interval=once
-signal=10
+signal=1
 
 [brightness]
 label=☀ 

@@ -9,7 +9,7 @@ if [ ! "$(cat /sys/class/net/$INTERFACE/operstate)" = 'up' ]; then
     exit
 fi
 
-ssid=`nmcli dev | grep connected | awk '{print $4}'`
+ssid=`nmcli dev | grep wifi | grep connected | awk '{print $4}'`
 quality=`nmcli dev wifi | grep $ssid | awk '{print $8}'`
 
 echo " $ssid: $quality%" 
