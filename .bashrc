@@ -11,5 +11,6 @@ PS1='[\u@\h \W]$(__git_ps1)\[\033[00m\]\\$ '
 
 alias ls='ls --color=auto'
 alias vim=nvim
+alias brave='brave -force-device-scale-factor=0.8'
 
 set -o vi
