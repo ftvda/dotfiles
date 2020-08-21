@@ -13,10 +13,10 @@ set imap_user = "ftvda283@gmail.com"
 
 #フォルダ設定
 set spoolfile = "+INBOX"
-set record = "+Sent"
-set trash = "+Archive"
-set postponed = "+Drafts"
-mailboxes =INBOX =Sent =Archive =Draft
+#set record = "+Sent"
+set trash = "+[Gmail]/ゴミ箱"
+set postponed = "+[Gmail]/下書き"
+mailboxes =INBOX
 
 #セキュリティ設定
 set ssl_starttls = yes

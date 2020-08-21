@@ -10,13 +10,17 @@ signal=1
 
 [brightness]
 label=☀ 
-command=xbacklight -get | xargs printf '%.0f%%\n'
+command=xbacklight -get | xargs printf '%.0f\n'
 interval=once
 signal=2
 
-[load average]
+[battery]
+command=$PWD/battery.sh
+interval=5
+
+[cpu]
 label= 
-command=echo "$(uptime | sed 's/.*load average: \(.*\)/\1/' | cut -d, -f1)/$(grep 'processor' /proc/cpuinfo | wc -l)"
+command=echo "$(uptime | sed 's/.*load average: \(.*\)/\1/' | cut -d, -f1)"
 interval=5
 
 [temperature]
@@ -26,15 +30,11 @@ interval=5
 
 [memory]
 label= 
-command=free -h | awk 'match($0, /^Mem/){print $3 " / " $2}'
+command=free -h | awk 'match($0, /^Mem/){print $3}'
 interval=5
 
 [wifi]
 command=./wifi.sh
-interval=5
-
-[battery]
-command=$PWD/battery.sh
 interval=5
 
 [calendar]

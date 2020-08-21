@@ -20,4 +20,4 @@ zassetsu1=`cut -d, -f8 <<<$lunar_cal`
 zassetsu2=`cut -d, -f9 <<<$lunar_cal`
 festivals=`cut -d, -f10 <<<$lunar_cal`
 
-echo "令和$reiwa年$leap${month_names[$month]}$date日 $six_labels $zodiac$sekki24$zassetsu1$zassetsu2$festivals"
+echo "令和$reiwa年$leap${month_names[$month - 1]}$date日 $six_labels $zodiac$sekki24$zassetsu1$zassetsu2$festivals"

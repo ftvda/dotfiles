@@ -7,4 +7,4 @@ mute=`pactl list sinks \
 volume=`pactl list sinks \
     | grep 'Volume' | grep -o '[0-9]*%' \
     | head -1 | tr -d '%'`
-echo "$state ${volume}%"
+echo "$state ${volume}"

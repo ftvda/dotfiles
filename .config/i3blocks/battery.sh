@@ -16,4 +16,4 @@ else
     state=
 fi
 
-echo "$state ${capacity}%"
+echo "$state ${capacity}"
