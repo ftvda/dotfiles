@@ -4,17 +4,13 @@ month_names=(睦月 如月 弥生 卯月 皐月 水無月 文月 葉月 長月 �
 solar_cal=`date "+%Y,%-m,%d"`
 lunar_cal=`grep ^$solar_cal lunar/calendar_j.csv | cut -d, -f10-`
 
-kanji_nums=(零 壱 弐 参 肆 伍 陸 漆 捌 玖)
+kanji_nums=(零壱弐参肆伍陸漆捌玖)
 
 year=`cut -d, -f1 <<<$lunar_cal`
-reiwa=$((year-2018))
-for i in `seq 0 $((${#reiwa}-1))`; do reiwa_kanji=$reiwa_kanji${kanji_nums[${reiwa:$i:1}]}; done
-reiwa=$reiwa_kanji
+reiwa=`sed y/0123456789/$kanji_nums/ <<< $((year-2018))`
 leap=`cut -d, -f2 <<<$lunar_cal`
 month=`cut -d, -f3 <<<$lunar_cal`
-date=`cut -d, -f4 <<<$lunar_cal`
-for i in `seq 0 $((${#date}-1))`; do date_kanji=$date_kanji${kanji_nums[${date:$i:1}]}; done
-date=$date_kanji
+date=`cut -d, -f4 <<<$lunar_cal | sed y/0123456789/$kanji_nums/`
 six_labels=`cut -d, -f5 <<<$lunar_cal`
 zodiac=`cut -d, -f6 <<<$lunar_cal`
 sekki24=`cut -d, -f7 <<<$lunar_cal`
