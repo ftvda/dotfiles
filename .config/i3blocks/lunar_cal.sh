@@ -1,8 +1,9 @@
 #!/bin/sh
 
 month_names=(睦月 如月 弥生 卯月 皐月 水無月 文月 葉月 長月 神無月 霜月 師走)
-solar_cal=`date "+%Y,%-m,%d"`
-lunar_cal=`grep ^$solar_cal lunar/calendar_j.csv | cut -d, -f10-`
+solar_cal=`date "+%Y,%-m,%-d"`
+#echo $solar_cal
+lunar_cal=`grep ^${solar_cal}, lunar/calendar_j.csv | cut -d, -f10-`
 
 kanji_nums=(零壱弐参肆伍陸漆捌玖)
 
