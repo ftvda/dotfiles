@@ -165,6 +165,8 @@ bindsym $mod+XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 0.5 && $
 # kbdbacklight is my DIY command
 bindsym XF86KbdBrightnessUp exec --no-startup-id kbdbacklight -inc 50
 bindsym XF86KbdBrightnessDown exec --no-startup-id kbdbacklight -dec 50
+bindsym $mod+XF86KbdBrightnessUp exec --no-startup-id kbdbacklight -inc 5
+bindsym $mod+XF86KbdBrightnessDown exec --no-startup-id kbdbacklight -dec 5
 
 # set wall paper
 # exec --no-startup-id feh --bg-fill $HOME/Pictures/wallpaper.jpg
