@@ -249,4 +249,7 @@ keycode 255 = XF86RFKill NoSymbol XF86RFKill NoSymbol XF86RFKill
 
 ! use caps_lock as escape 
 remove Lock = Caps_Lock
-keysym Caps_Lock = Escape
+keysym Caps_Lock = Escape Caps_Lock
+
+! setxkbmap jp106
+! setxkbmap us
