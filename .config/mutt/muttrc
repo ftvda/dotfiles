@@ -1,5 +1,3 @@
-#ref: https://debimate.jp/2019/06/01/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%EF%BC%9Aterminalcli%E5%90%91%E3%81%91%E3%83%A1%E3%83%BC%E3%83%A9%E3%83%BCneomutt%E3%81%A7gmail%E3%82%92%E9%80%81%E5%8F%97%E4%BF%A1%E3%81%99%E3%82%8B%E3%81%9F/
-
 source "gpg -d ~/.config/mutt/password.gpg |" #パスワードの読み込み
 
 set realname = "Matsuda Kenji"
@@ -13,10 +11,11 @@ set imap_user = "ftvda283@gmail.com"
 
 #フォルダ設定
 set spoolfile = "+INBOX"
-#set record = "+Sent"
-set trash = "+[Gmail]/ゴミ箱"
-set postponed = "+[Gmail]/下書き"
-mailboxes =INBOX
+set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Trash"
+set postponed = "+[Gmail]/Drafts"
+mailboxes =INBOX =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Spam =[Gmail]/Trash
+set sort=reverse-date
 
 #セキュリティ設定
 set ssl_starttls = yes
@@ -28,3 +27,12 @@ set charset = "utf-8"
 set certificate_file = "./certificates"
 set mailcap_path = "./mailcap" 
 auto_view text/html
+set sidebar_visible
+
+# Vim like binds
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+bind pager g top
+bind pager G bottom
+bind attach,index g first-entry
+bind attach,index G last-entry
