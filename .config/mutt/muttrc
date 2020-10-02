@@ -11,10 +11,12 @@ set imap_user = "ftvda283@gmail.com"
 
 #フォルダ設定
 set spoolfile = "+INBOX"
-set record = "+[Gmail]/Sent Mail"
+#set record = "+[Gmail]/Sent Mail"
+unset record
 set trash = "+[Gmail]/Trash"
 set postponed = "+[Gmail]/Drafts"
-mailboxes =INBOX =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Spam =[Gmail]/Trash
+#mailboxes =INBOX =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Spam =[Gmail]/Trash
+named-mailboxes "inbox" =INBOX "sent" =[Gmail]/Sent\ Mail "drafts" =[Gmail]/Drafts "spam" =[Gmail]/Spam "trash" =[Gmail]/Trash
 set sort=reverse-date
 
 #セキュリティ設定

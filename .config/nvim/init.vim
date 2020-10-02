@@ -4,6 +4,14 @@ set encoding=utf-8
 set number
 set shiftwidth=4
 set tabstop=4
+set foldmethod=indent
+set relativenumber
+colorscheme desert
+
+noremap <c-h> <c-w><c-h>
+noremap <c-j> <c-w><c-j>
+noremap <c-k> <c-w><c-k>
+noremap <c-l> <c-w><c-l>
 
 autocmd Filetype html inoremap ;1 <h1></h1><++><Esc>8hi
 autocmd Filetype html inoremap ;2 <h2></h2><++><Esc>8hi
