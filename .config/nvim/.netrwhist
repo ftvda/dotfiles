@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/kenji/.config/i3blocks'
+let g:netrw_dirhist_2='/home/kenji/.config/ranger'
+let g:netrw_dirhist_1='/home/kenji/src/python/othello/reversi'
+let g:netrw_dirhist_0='/home/kenji/src/python/othello/reversi/game'
+let g:netrw_dirhist_9='/home/kenji/src/python/othello/data'
+let g:netrw_dirhist_8='/home/kenji/.config/tmux'
+let g:netrw_dirhist_7='/home/kenji/src/python/othello/reversi/reversi'
+let g:netrw_dirhist_6='/home/kenji/.local/lib/python3.8/site-packages/absl'
+let g:netrw_dirhist_5='/mnt/hdd/tama/docs/kakeibo'
+let g:netrw_dirhist_4='/etc/X11/xorg.conf.d'
