@@ -5,13 +5,13 @@ markup=none
 [volume]
 label=
 command=$PWD/volume.sh
-interval=once
+interval=2
 signal=1
 
 [brightness]
-label=☀ 
-command=xbacklight -get | xargs printf '%.0f\n'
-interval=once
+label= 
+command=$PWD/brightness.sh
+interval=2
 signal=2
 
 [battery]

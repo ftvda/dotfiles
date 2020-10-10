@@ -1,15 +1,22 @@
 #!/bin/sh
 
-INTERFACE=wlp3s0
+INTERFACE=$(grep up /sys/class/net/*/operstate | sed 's!/operstate:up$!!;s!^.*/!!')
 
-[ ! -d /sys/class/net/${INTERFACE}/wireless ] && exit
-
-if [ ! "$(cat /sys/class/net/$INTERFACE/operstate)" = 'up' ]; then
+if [ -z $INTERFACE ]; then
     echo  down
     exit
 fi
 
-ssid=`nmcli dev | grep wifi | grep connected | awk '{print $4}'`
-quality=`nmcli dev wifi | grep $ssid | awk '{print $8}'`
+if [ -d /sys/class/net/${INTERFACE}/wireless ]; then
+	label=
+	ssid=`nmcli dev | grep wifi | grep connected | awk '{print $4}'`
+	quality=`nmcli dev wifi | grep $ssid | awk '{print $8}'`
+	echo "$label $ssid: $quality%" 
+else 
+	label=
+	ssid='ethernet'
+	echo "$label"
+fi
 
-echo " $ssid: $quality%" 
+
+

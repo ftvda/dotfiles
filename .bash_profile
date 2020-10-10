@@ -24,4 +24,5 @@ export PSQL_HISTORY="$XDG_CONFIG_HOME/pg/psql_history"
 # less
 export LESSHSTFILE=-
 
-[[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]] && exec startx $XINITRC
+export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
+[[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]] && exec xinit $XINITRC
