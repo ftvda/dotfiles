@@ -25,4 +25,5 @@ export PSQL_HISTORY="$XDG_CONFIG_HOME/pg/psql_history"
 export LESSHSTFILE=-
 
 export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/cuda-10.2/lib64"
 [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]] && exec xinit $XINITRC
