@@ -34,5 +34,3 @@ autocmd Filetype html inoremap ;b <b></b><Esc>3hi
 autocmd Filetype html inoremap ;i <i></i><Esc>3hi
 autocmd Filetype html inoremap ;pre <pre></pre><Esc>5hi
 autocmd Filetype html inoremap ;cd <code></code><Esc>6hi
-
-autocmd Filetype python set tags=tags;,~/.local/lib/python3.8/site-packages/tags
