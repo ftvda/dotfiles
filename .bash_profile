@@ -8,6 +8,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export PATH="$PATH:$HOME/.local/bin"
 export EDITOR=nvim
+export TERMINAL=st
 export HISTFILE="$XDG_CACHE_HOME/bash/.bash_history"
 
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
