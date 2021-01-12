@@ -8,7 +8,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export PATH="$PATH:$HOME/.local/bin"
 export EDITOR=nvim
-export TERMINAL=st
+export TERMINAL=urxvt
 export HISTFILE="$XDG_CACHE_HOME/bash/.bash_history"
 
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
@@ -27,4 +27,5 @@ export LESSHSTFILE=-
 
 export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/cuda-10.2/lib64"
+
 [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]] && exec xinit $XINITRC
