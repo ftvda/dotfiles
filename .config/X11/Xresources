@@ -5,7 +5,9 @@ URxvt.cursorUnderline:      true
 URxvt.pointerBlank:         true
 URxvt.saveLines:            3000
 URxvt.fading:	20
-
+URxvt.visualBell:	true
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/brave
 
 URxvt.color0:               #282828
 URxvt.color1:               #cc241d
@@ -31,7 +33,6 @@ URxvt.colorUL:              #83a598
 URxvt.scrollColor:          #504945
 
 ! font config
-! いい感じのSerif Monospaceフォントがあれば欲しいのですが
-URxvt.font:	xft:Noto Sans Mono:size=10:antialias=true, xft:Noto Serif CJK JP:size=10:antialias=true, xft:Noto Color Emoji:size=10:antialias=true
+URxvt.font:	xft:Source Code Pro:size=10:antialias=true, xft:Noto Serif CJK JP:size=10:antialias=true, xft:Noto Color Emoji:size=10:antialias=true
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot 

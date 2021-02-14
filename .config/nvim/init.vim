@@ -6,6 +6,7 @@ set shiftwidth=4
 set tabstop=4
 set foldmethod=indent
 set relativenumber
+set ambiwidth=double
 colorscheme desert
 
 noremap <c-h> <c-w><c-h>
