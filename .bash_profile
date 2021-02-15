@@ -23,7 +23,7 @@ export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
 export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
 export PSQL_HISTORY="$XDG_CONFIG_HOME/pg/psql_history"
 # less
-export LESSHSTFILE=-
+export LESSHISTFILE=-
 
 export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/cuda-10.2/lib64"
