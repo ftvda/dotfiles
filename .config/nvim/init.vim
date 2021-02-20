@@ -7,7 +7,7 @@ set tabstop=4
 "set foldmethod=indent
 set relativenumber
 set ambiwidth=double
-set viminfo+=n{~/.cache/vim/viminfo}
+set viminfo+=n~/.cache/vim/viminfo
 colorscheme desert
 
 noremap <c-h> <c-w><c-h>

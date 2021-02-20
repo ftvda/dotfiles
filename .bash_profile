@@ -29,4 +29,4 @@ export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/cuda-10.2/lib64"
 export VTE_CJK_WIDTH=1
 
-[[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]] && exec xinit $XINITRC
+[[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]] && exec startx $XINITRC

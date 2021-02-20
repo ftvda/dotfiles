@@ -36,3 +36,6 @@ URxvt.scrollColor:          #504945
 URxvt.font:	xft:Source Code Pro:size=10:antialias=true, xft:Noto Serif CJK JP:size=10:antialias=true, xft:Noto Color Emoji:size=10:antialias=true
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot 
+
+Sxiv.background:	#000000
+Sxiv.foreground:	#AAAAAA

@@ -27,9 +27,11 @@ set ssl_force_tls = yes
 set editor = "vim"
 set charset = "utf-8"
 set certificate_file = "./certificates"
-set mailcap_path = "./mailcap" 
+set mailcap_path = "~/.config/mutt/mailcap" 
 auto_view text/html
 set sidebar_visible
+set sidebar_width = 15
+set sidebar_divider_char = '|'
 
 # Vim like binds
 bind attach,index,pager \CD next-page
