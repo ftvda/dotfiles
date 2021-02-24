@@ -38,5 +38,4 @@ export XMODIFIERS="@im=ibus"
 
 ibus-daemon --xim &
 unclutter --timeout 1 &
-syndaemon -i 0.2 -k &
 exec i3

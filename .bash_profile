@@ -18,8 +18,6 @@ export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 # less
 export LESSHISTFILE=-
 
-#export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/cuda-10.2/lib64"
-#export VTE_CJK_WIDTH=1
 eval `/usr/local/bin/wcwidth-cjk --sh-init`
 
 [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]] && exec startx $XINITRC
