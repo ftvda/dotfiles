@@ -65,7 +65,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
+bindsym $mod+e layout default
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -79,7 +79,7 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+c focus child
 
-bindsym $mod+e exec dmenu_emoji
+bindsym $mod+m exec dmenu_emoji
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -153,9 +153,9 @@ bar {
     status_command i3blocks
 }
 
-#bindsym $mod+b exec brave -high-dpi-support=1 -force-device-scale-factor=0.8 
-bindsym $mod+b exec surf "https://searx.bar"
-bindsym $mod+t exec surf twitter.com
+bindsym $mod+b exec brave -high-dpi-support=1 -force-device-scale-factor=0.8 
+#bindsym $mod+b exec surf "https://searx.bar"
+#bindsym $mod+t exec surf twitter.com
 
 # Screen brightness controls
 set $refresh_brightness pkill -SIGRTMIN+2 i3blocks
