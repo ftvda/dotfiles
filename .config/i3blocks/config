@@ -2,6 +2,15 @@ command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+[stock]
+label=[225]
+command=$PWD/stock.sh 998407.O
+interval=10
+[TOPIX]
+label=[TOPIX]
+command=$PWD/stock.sh 998405.T
+interval=10
+
 [volume]
 label=
 command=$PWD/volume.sh
