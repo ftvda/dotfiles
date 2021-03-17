@@ -33,7 +33,7 @@ URxvt.colorUL:              #83a598
 URxvt.scrollColor:          #504945
 
 ! font config
-URxvt.font:	xft:Source Code Pro:size=10:antialias=true, xft:Noto Serif CJK JP:size=10:antialias=true, xft:Noto Color Emoji:size=10:antialias=true
+URxvt.font:	xft:Source Code Pro:size=10:antialias=true
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot 
 

@@ -18,6 +18,6 @@ export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 # less
 export LESSHISTFILE=-
 
-eval `/usr/local/bin/wcwidth-cjk --sh-init`
+#eval `/usr/local/bin/wcwidth-cjk --sh-init`
 
 [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]] && exec startx $XINITRC

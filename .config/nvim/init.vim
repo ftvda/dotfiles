@@ -37,8 +37,10 @@ autocmd Filetype html inoremap ;3 <h3></h3><Esc>4hi
 autocmd Filetype html inoremap ;4 <h4></h4><Esc>4hi
 autocmd Filetype html inoremap ;5 <h5></h5><Esc>4hi
 autocmd Filetype html inoremap ;6 <h6></h6><Esc>4hi
-autocmd Filetype html inoremap ;pa <p><Return><Return></p><Esc>k
+autocmd Filetype html inoremap ;pa <p><Return><Return></p><Esc>ki
 autocmd Filetype html inoremap ;b <b></b><Esc>3hi
 autocmd Filetype html inoremap ;i <i></i><Esc>3hi
-autocmd Filetype html inoremap ;pre <pre><Return><Return></pre><Esc>k
-autocmd Filetype html inoremap ;cd <code><Return><Return></code><Esc>k
+autocmd Filetype html inoremap ;pre <pre><Return><Return></pre><Esc>ki
+autocmd Filetype html inoremap ;cd <code><Return><Return></code><Esc>ki
+autocmd Filetype html inoremap ;code <code><pre><Return><Return></pre></code><Esc><<ki
+
