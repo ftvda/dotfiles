@@ -1,12 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/usr/share/terminfo/A'
+let g:netrw_dirhist_3='/usr/share/terminfo'
+let g:netrw_dirhist_2='/usr/share/terminfo/1'
+let g:netrw_dirhist_1='/usr/share/terminfo'
 let g:netrw_dirhist_0='/home/kenji/.config/fontconfig'
 let g:netrw_dirhist_9='/etc/fonts/conf.d'
 let g:netrw_dirhist_8='/home/kenji/.config/fontconfig'
 let g:netrw_dirhist_7='/home/kenji/.config/surf/styles'
 let g:netrw_dirhist_6='/etc/hosts.d'
 let g:netrw_dirhist_5='/home/kenji/.local/src/st'
-let g:netrw_dirhist_4='/home/kenji'
-let g:netrw_dirhist_3='/home/kenji/.config/i3blocks'
-let g:netrw_dirhist_2='/home/kenji/.config/ranger'
-let g:netrw_dirhist_1='/home/kenji/src/python/othello/reversi'

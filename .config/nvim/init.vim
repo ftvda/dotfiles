@@ -9,10 +9,10 @@ set relativenumber
 set ambiwidth=double
 set viminfo+=n~/.cache/vim/viminfo
 set undofile 
-if !isdirectory(expand("$XDG_CONFIG_HOME/nvim/undodir"))
-	call mkdir(expand("$XDG_CONFIG_HOME/nvim/undodir"), "p")
+if !isdirectory(expand("$XDG_CACHE_HOME/nvim/undodir"))
+	call mkdir(expand("$XDG_CACHE_HOME/nvim/undodir"), "p")
 endif
-set undodir=$XDG_CONFIG_HOME/nvim/undodir
+set undodir=$XDG_CACHE_HOME/nvim/undodir
 colorscheme desert
 
 noremap <c-h> <c-w><c-h>
@@ -31,6 +31,7 @@ imap <left> <nop>
 imap <right> <nop>
 
 "html tag
+autocmd Filetype html inoremap ;com <!--  --><Esc>3hi
 autocmd Filetype html inoremap ;1 <h1></h1><Esc>4hi
 autocmd Filetype html inoremap ;2 <h2></h2><Esc>4hi
 autocmd Filetype html inoremap ;3 <h3></h3><Esc>4hi
@@ -44,3 +45,5 @@ autocmd Filetype html inoremap ;pre <pre><Return><Return></pre><Esc>ki
 autocmd Filetype html inoremap ;cd <code><Return><Return></code><Esc>ki
 autocmd Filetype html inoremap ;code <code><pre><Return><Return></pre></code><Esc><<ki
 
+"xml tag
+autocmd Filetype xml inoremap ;com <!--  --><Esc>3hi

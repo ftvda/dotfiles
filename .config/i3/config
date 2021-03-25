@@ -153,7 +153,7 @@ bar {
     status_command i3blocks
 }
 
-bindsym $mod+b exec brave -high-dpi-support=1 -force-device-scale-factor=0.8 
+bindsym $mod+b exec brave -high-dpi-support=1 -force-device-scale-factor=0.8
 #bindsym $mod+b exec surf "https://searx.bar"
 #bindsym $mod+t exec surf twitter.com
 
