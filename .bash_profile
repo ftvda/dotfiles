@@ -18,6 +18,8 @@ export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 # less
 export LESSHISTFILE=-
 
+export BROWSER="brave -high-dpi-support=1 -force-device-scale-factor=0.8"
+
 #eval `/usr/local/bin/wcwidth-cjk --sh-init`
 
 [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]] && exec startx $XINITRC

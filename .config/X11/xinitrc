@@ -39,4 +39,5 @@ export XMODIFIERS="@im=ibus"
 
 ibus-daemon --xim &
 unclutter --timeout 1 &
-exec i3
+dwmblocks &
+exec dwm
