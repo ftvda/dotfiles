@@ -4,14 +4,12 @@ set encoding=utf-8
 set number
 set shiftwidth=4
 set tabstop=4
-"set foldmethod=indent
-set relativenumber
 set ambiwidth=double
-set viminfo+=n~/.cache/vim/viminfo
-set undofile 
 if !isdirectory(expand("$XDG_CACHE_HOME/nvim/undodir"))
 	call mkdir(expand("$XDG_CACHE_HOME/nvim/undodir"), "p")
 endif
+set viminfo+=n~/.cache/nvim/viminfo
+set undofile 
 set undodir=$XDG_CACHE_HOME/nvim/undodir
 colorscheme desert
 
