@@ -10,6 +10,6 @@ PS1='[\u@\h \W]$(__git_ps1)\[\033[00m\]\\$ '
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias w3m='env HOME=$XDG_CONFIG_HOME w3m'
+alias brave='brave -high-dpi-support=1 -force-device-scale-factor=0.8'
 
 set -o vi

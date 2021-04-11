@@ -24,7 +24,7 @@ set ssl_starttls = yes
 set ssl_force_tls = yes
 
 #基本設定
-set editor = "vim"
+set editor = "vi"
 set charset = "utf-8"
 set certificate_file = "./certificates"
 set mailcap_path = "~/.config/mutt/mailcap" 

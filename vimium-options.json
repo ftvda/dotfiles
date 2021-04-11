@@ -1,0 +1,21 @@
+{
+  "settingsVersion": "1.66",
+  "exclusionRules": [],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "# Insert your preferred key mappings here.",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 60,
+  "smoothScroll": false,
+  "grabBackFocus": true,
+  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\n\n# More examples.\n#\n# (Vimium supports search completion Wikipedia, as\n# above, and for these.)\n#\ng: https://www.google.com/search?q=%s Google\n# l: https://www.google.com/search?q=%s&btnI I'm feeling lucky...\n# y: https://www.youtube.com/results?search_query=%s Youtube\n# gm: https://www.google.com/maps?q=%s Google maps\n# b: https://www.bing.com/search?q=%s Bing\nd: https://duckduckgo.com/?q=%s DuckDuckGo\n# az: https://www.amazon.com/s/?field-keywords=%s Amazon\n# qw: https://www.qwant.com/?q=%s Qwant",
+  "searchUrl": "https://anon.sx/?preferences=eJxtVcGO4zYM_Zr6YmTRdg978qFoUXSLBWbQmfYq0BLjcC2JXkpOxvv1pSZ2Iqc92ICpR_LxkaItZBxYCFM3YEQB33iIwwwDdl_h8Odz49mCxw5jA3Nmy2HymLFrKCjGTMJvS_c7-IRNwHxi1z0_vbw2CY6YEMSeuh-bfMKAHScL0gim2edkOJqIF5OhX70dk9FD9meUjkE_P7AMzbvXIeVFOXgeyLLD88GBjA24M0SLzqyJ1jiUoPdqxThQ1LomRMlzj8acySGnH37-daBBMZCyMWvVajw6YXLGHMljAdlZBKNdasyFxkwcQXbWoyC2iY_5AoKtI0GbuUAo62nC7xHCHg8BPPWCK8SRzd85Yg2iqHSJ52RMmBNZNY1kR0jpTjEuAPfjzOPCmdOJR4h30BzTpLWeNFdpWbqWodJcNFJ5_9d1i3gVtkjeltfGdnYYa6qCzlG-BUPhSxHyDhgoe-hX9w19YwPT2AYSYVkRA_PgsVXWSwvTVBU8IGoDAqYVeYJeoLzW75tCt1Z77lPGD7J5XCXb4hUheuYx1WyvkBu9je8d8NPHj5_eqhwlyreZ80P_oIKAHRLPVdRvF4i7oBvi5nKlsUuiALH4f15bQWEJGHT22iwQk9fbvWsETxgFJ64kTRkkT-UuVzjMS-DoaT-ShcKZlwesm-1YnoHba3VVlZiZfXqM4SDDbjyqfgc-E9YNvIffteCtHqBVhG1st44ltgS-DegINvooifLu9gb-qlP1yHEqTrXx4Yrc-bmhdXikSGUz7Gq9TeNGrNwmpdDSDlY2gW6UtljS_qjcuh5lWIe32gm3_NbaQz5XBpn7ZcCwDfxRKI4EttIrgsqwm_gprOiecq9iY7mfucG4X6UX6nfSLXDie1vuq3fyszqk7knHzfxiLaoIvz191v1-Ecqonv9QOHga0Zw4j7gUVn-UHXX1vCXeAn2O7wKjSVbYl9Qv76up_Ebs9Re26G_A6-ItkV5fn1-qZK8CWpKYv__6oladMJT3CP5oNDBLgPfWNdpi1GT_Ah3Sqxw=&q=",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: #FFC542;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}
