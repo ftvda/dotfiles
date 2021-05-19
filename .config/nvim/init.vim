@@ -28,6 +28,10 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+"eskk.vim
+let eskk#dictionary='~/.config/skk/skk-vim-jisyo'
+let eskk#large_dictionary='/usr/share/skk/SKK-JISYO.L'
+
 "html tag
 autocmd Filetype html inoremap ;com <!--  --><Esc>3hi
 autocmd Filetype html inoremap ;1 <h1></h1><Esc>4hi
