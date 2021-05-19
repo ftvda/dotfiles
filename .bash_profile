@@ -22,9 +22,10 @@ export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 # less
 export LESSHISTFILE=-
 
-[ $(uname) = 'FreeBSD' ] && \
-	export BROWSER="chrome --app="'https://freebsd.org' || \
+if [ $(uname) = 'FreeBSD' ]; then 
+	export BROWSER="chrome --app="'https://freebsd.org'
+	[ -z $DISPLAY ] && [ $(tty) = /dev/ttyv0 ] && exec startx $XINITRC
+else
 	export BROWSER="brave --app="'https://archlinux.org'
-
-
-[ -z $DISPLAY ] && [ $(tty) = /dev/ttyv0 ] && exec startx $XINITRC
+	[ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ] && exec startx $XINITRC
+fi
