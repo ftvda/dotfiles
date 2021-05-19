@@ -22,7 +22,9 @@ export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 # less
 export LESSHISTFILE=-
 
-export CHROME="chrome --app="'https://freebsd.org'
+[ $(uname) = 'FreeBSD' ] && \
+	export CHROME="chrome --app="'https://freebsd.org' || \
+	export BRAVE="brave --app="'https://archlinux.org'
 
 
 [ -z $DISPLAY ] && [ $(tty) = /dev/ttyv0 ] && exec startx $XINITRC
