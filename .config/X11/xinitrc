@@ -11,17 +11,10 @@ if [ -f $usermodmap ]; then
     xmodmap $usermodmap
 fi
 
-#export DefaultIMModule=ibus
-#export GTK_IM_MODULE=ibus
-#export QT_IM_MODULE=ibus
-#export XMODIFIERS="@im=ibus"
-#ibus-daemon --xim &
+export XMODIFIERS='@im=uim'
+export GTK_IM_MODULE=uim
+export GTK3_IM_MODULE=uim
+uim-xim &
 
-#export DefaultIMModule='uim'
-#export GTK_IM_MODULE='uim'
-#export QT_IM_MODULE='uim'
-#uim-xim --engine=skk &
-#export XMODIFIERS='@im=uim'
-
-#dwmblocks &
+dwmblocks&
 exec dwm
