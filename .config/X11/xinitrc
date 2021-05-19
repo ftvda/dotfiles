@@ -3,8 +3,6 @@
 userresources=$XDG_CONFIG_HOME/X11/Xresources
 usermodmap=$XDG_CONFIG_HOME/X11/Xmodmap
 
-setxkbmap -layout jp
-
 if [ -f $userresources ]; then
     xrdb -merge $userresources
 fi
@@ -13,12 +11,10 @@ if [ -f $usermodmap ]; then
     xmodmap $usermodmap
 fi
 
-export DefaultIMModule='uim'
-export GTK_IM_MODULE='uim'
-export QT_IM_MODULE='uim'
 export XMODIFIERS='@im=uim'
+export GTK_IM_MODULE=uim
+export GTK3_IM_MODULE=uim
 uim-xim &
 
-unclutter --timeout 1 &
-dwmblocks &
+dwmblocks&
 exec dwm

@@ -1,6 +1,6 @@
 # ~/.bash_profile
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+[ -f ~/.shrc ] && . ~/.shrc
 
 # ~/ clean up:
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -9,20 +9,22 @@ export XDG_CACHE_HOME="$HOME/.cache"
 [ ! -d $XDG_CACHE_HOME ] && mkdir -p $XDG_CACHE_HOME
 
 export PATH="$PATH:$HOME/.local/bin"
-export EDITOR=nvim
+export EDITOR=vi
 export TERMINAL=st
-export HISTFILE="$XDG_CACHE_HOME/bash/.bash_history"
+export HISTFILE="$XDG_CACHE_HOME/.sh_history"
 
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export XAUTHORITY="$XDG_CACHE_HOME/X11/Xauthority"
+[ ! -d $XDG_CONFIG_HOME/X11 ] && mkdir -p $XDG_CONFIG_HOME/X11
+[ ! -d $XDG_CACHE_HOME/X11 ] && mkdir -p $XDG_CACHE_HOME/X11
 #gnupg
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 # less
 export LESSHISTFILE=-
 
-export BRAVE="brave --app="'https://archlinux.org'
-export SURF="surf "'https://archlinux.org'
+[ $(uname) = 'FreeBSD' ] && \
+	export CHROME="chrome --app="'https://freebsd.org' || \
+	export BRAVE="brave --app="'https://archlinux.org'
 
-#eval `/usr/local/bin/wcwidth-cjk --sh-init`
 
-[[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]] && exec startx $XINITRC
+[ -z $DISPLAY ] && [ $(tty) = /dev/ttyv0 ] && exec startx $XINITRC
