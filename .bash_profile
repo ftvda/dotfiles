@@ -23,9 +23,9 @@ export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 export LESSHISTFILE=-
 
 if [ $(uname) = 'FreeBSD' ]; then 
-	export BROWSER="chrome --app="'https://freebsd.org'
+	export BROWSER="chrome"
 	[ -z $DISPLAY ] && [ $(tty) = /dev/ttyv0 ] && exec startx $XINITRC
 else
-	export BROWSER="brave --app="'https://archlinux.org'
+	export BROWSER="brave"
 	[ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ] && exec startx $XINITRC
 fi

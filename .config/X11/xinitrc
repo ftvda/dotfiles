@@ -14,7 +14,8 @@ fi
 export XMODIFIERS='@im=uim'
 export GTK_IM_MODULE=uim
 export GTK3_IM_MODULE=uim
-uim-xim &
+#uim-xim &
 
-dwmblocks&
+unclutter --timeout 1 --ignore-scrolling &
+dwmblocks &
 exec dwm
