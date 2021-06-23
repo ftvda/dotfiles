@@ -4,7 +4,7 @@ set encoding=utf-8
 set number
 set shiftwidth=4
 set tabstop=4
-set ambiwidth=double
+"set ambiwidth=double
 if !isdirectory(expand("$XDG_CACHE_HOME/nvim/undodir"))
 	call mkdir(expand("$XDG_CACHE_HOME/nvim/undodir"), "p")
 endif
@@ -30,7 +30,8 @@ imap <right> <nop>
 
 "eskk.vim
 let eskk#dictionary='~/.config/skk/skk-vim-jisyo'
-let eskk#large_dictionary='/usr/share/skk/SKK-JISYO.L'
+let eskk#large_dictionary='/usr/local/share/skk/SKK-JISYO.L'
+let eskk#egg_like_newline=1
 
 "html tag
 autocmd Filetype html inoremap ;com <!--  --><Esc>3hi
