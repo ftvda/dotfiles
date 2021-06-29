@@ -28,15 +28,20 @@ set editor = "vi"
 set charset = "utf-8"
 set certificate_file = "./certificates"
 set mailcap_path = "~/.config/mutt/mailcap" 
-auto_view text/html
+auto_view text/plain
+#set implicit_autoview = "yes"
 set sidebar_visible
 set sidebar_width = 15
 set sidebar_divider_char = '|'
 
 # Vim like binds
-bind attach,index,pager \CD next-page
-bind attach,index,pager \CU previous-page
+bind attach,index,pager \CD half-down
+bind attach,index,pager \CU half-up
 bind pager g top
 bind pager G bottom
+bind pager j next-line
+bind pager k previous-line
+bind pager \CN next-undeleted
+bind pager \CP previous-undeleted
 bind attach,index g first-entry
 bind attach,index G last-entry

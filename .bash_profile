@@ -6,14 +6,14 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_RUNTIME_DIR="/tmp/xdg_runtime_dir_$USER"
 [ ! -d $XDG_CONFIG_HOME ] && mkdir -p $XDG_CONFIG_HOME
 [ ! -d $XDG_CACHE_HOME ] && mkdir -p $XDG_CACHE_HOME
 [ ! -d $XDG_DATA_HOME ] && mkdir -p $XDG_DATA_HOME
 
 export PATH="$PATH:$HOME/.local/bin"
-export EDITOR=vi
-export TERMINAL=st
-export HISTFILE="$XDG_CACHE_HOME/.sh_history"
+export EDITOR=nvim
+export HISTFILE="$XDG_CACHE_HOME/sh_history"
 
 export X11HOME="$XDG_CONFIG_HOME/X11"
 export XINITRC="$X11HOME/xinitrc"
