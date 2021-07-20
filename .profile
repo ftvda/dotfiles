@@ -1,6 +1,6 @@
-# ~/.bash_profile
+# ~/.profile
 
-[ -f ~/.shrc ] && . ~/.shrc
+export ENV=$HOME/.shrc
 
 # ~/ clean up:
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -25,5 +25,6 @@ export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 # less
 export LESSHISTFILE=-
 
-export BROWSER="chrome"
+export BROWSER="firefox"
+export TERMINAL="st"
 [ -z $DISPLAY ] && [ $(tty) = /dev/ttyv0 ] && exec startx $XINITRC

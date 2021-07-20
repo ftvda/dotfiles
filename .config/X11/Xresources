@@ -1,2 +1,6 @@
-Sxiv.background:	#000000
-Sxiv.foreground:	#AAAAAA
+*background:	#000000
+*foreground:	#FFFFFF
+
+! xterm
+xterm*faceName: monospace :size=11:antialias=true
+xterm*visualBell: true

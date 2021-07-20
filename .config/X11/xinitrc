@@ -16,6 +16,5 @@ export GTK_IM_MODULE=uim
 export GTK3_IM_MODULE=uim
 #uim-xim &
 
-#unclutter --timeout 1 --ignore-scrolling &
 dwmblocks &
 exec dwm
